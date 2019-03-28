@@ -1,16 +1,10 @@
 # **Finding Lane Lines on the Road** 
-
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
 
 
 [//]: # (Image References)
@@ -27,8 +21,7 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
-
+### 1. The Pipeline
 My pipeline consisted of 5 steps. 
 1. Convert the images to grayscale for Canny Edge Detection
 2. Apply a Gaussian Blur with a kernel size=5 to reduce detail and noise of the image
