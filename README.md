@@ -59,8 +59,12 @@ With all these lines, how do we actually find the accurate lines that surround o
 
 
 ### 2. Identify potential shortcomings with your current pipeline
-A potential shortcoming my approach is that it is not fully generalizable. It works fine for Exhibit 1/2, but for Exhibit 3, I needed to modify the parameters for Hough Transform. Hough Transform takes a bunch of arguments such as (**treshold**, **min_line_len**, **max_line_gap**), that have a huge effect on the result.
+A potential shortcoming my approach is that it is not fully generalizable. It works fine for Exhibit 1/2, but for Exhibit 3, I needed to modify the parameters for Hough Transform. Hough Transform takes a bunch of arguments such as (**treshold**, **min_line_len**, **max_line_gap**), that have a huge effect on the result. For example, as seen in Exhibit 3, the left_lane_line is longer than the right_lane_line. This is because the right_lane_line is made up of disconnected white lines, and I could actually solve this problem by increasing the value of the max_line_gap to make the right_lane_line. However, if I increase max_line_gap, the rest of the model becomes more noisy. Thus, it is not generalizable.
 
 
 ### 3. Suggest possible improvements to your pipeline
-I would continue experimenting with the differnt parameters for hough transform. Maybe use some grid search to ptimi
+I would continue experimenting with the differnt parameters for hough transform. Maybe use some grid search to search for optimal parameters. Besides just tuning parameters, I'd like to explore other techniques to solve
+a) curved lane line situation (Exhibit 3)
+b) Lines with different colors (HSL/HSV Color Spaces?)
+
+I believe there is many more techniques including even deep learning that could be used to tackle these problems, so I'd like to explore more literature around this topic!
